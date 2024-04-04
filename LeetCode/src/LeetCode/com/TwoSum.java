@@ -23,7 +23,7 @@ public class TwoSum {
 			for(int j=i+1;j<arr.length;j++) {
 				sum=arr[i]+arr[j];
 				if(sum==target) {
-					System.out.println("index value true"+i+j);
+					//System.out.println("index value true"+i+j);
 					arr1[0]=i;
 					arr1[1]=j;
 			  
