@@ -6,6 +6,7 @@ public class LCS {
 		String [] strs={"flower","flow","flowed"};
 		String LCS=longestCommonPrefix( strs);
 		System.out.println(LCS);
+		System.out.println(LCS.length());
 
 	}
 
