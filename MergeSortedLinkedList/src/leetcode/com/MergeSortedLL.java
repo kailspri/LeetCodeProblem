@@ -1,31 +1,31 @@
 package leetcode.com;
 
-class ListNode {
+class Node {
     int val;
-    ListNode next;
+    Node next;
 
-    public ListNode(int val) {
+    public Node(int val) {
         this.val = val;
     }
 
-    public ListNode() {
+    public Node() {
     }
 }
 
 public class MergeSortedLL {
-    private ListNode head;
+    private Node head;
 
     public MergeSortedLL() {
         this.head = null;
     }
 
     private void addLast(int val) {
-        ListNode newNode = new ListNode(val);
+        Node newNode = new Node(val);
         if (this.head == null) {
             this.head = newNode;
             newNode.next = null;
         } else {
-            ListNode trav = head;
+            Node trav = head;
             while (trav.next != null) {
                 trav = trav.next;
             }
@@ -34,17 +34,17 @@ public class MergeSortedLL {
         }
     }
 
-    private void printList(ListNode head) {
-        ListNode trav = head;
+    private void printList(Node head) {
+        Node trav = head;
         while (trav != null) {
             System.out.println(trav.val);
             trav = trav.next;
         }
     }
 
-    private ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        ListNode dummy = new ListNode();
-        ListNode trav = dummy;
+    private Node mergeTwoLists(Node l1, Node l2) {
+        Node dummy = new Node();
+        Node trav = dummy;
 
         while (l1 != null && l2 != null) {
             if (l1.val < l2.val) {
@@ -67,15 +67,15 @@ public class MergeSortedLL {
         return dummy.next;
     }
 
-    public ListNode mergeSort(ListNode head) {
+    public Node mergeSort(Node head) {
         if (head == null || head.next == null) {
             return head;
         }
 
-        ListNode prev = null;
-        ListNode slow = head;
-        ListNode fast = head;
-
+        Node prev = null;
+        Node slow = head;
+        Node fast = head;
+ //this gives the middle of the linked list 
         while (fast != null && fast.next != null) {
             prev = slow;
             slow = slow.next;
@@ -84,8 +84,9 @@ public class MergeSortedLL {
 
         prev.next = null;
 
-        ListNode left = mergeSort(head);
-        ListNode right = mergeSort(slow);
+        Node left = mergeSort(head);
+        Node right = mergeSort(slow);
+              
 
         return mergeTwoLists(left, right);
     }
@@ -107,10 +108,13 @@ public class MergeSortedLL {
         m2.printList(m2.head);
 
         MergeSortedLL mergeSort = new MergeSortedLL();
-        ListNode unsortedlist=mergeSort.mergeTwoLists(m1.head, m2.head);
-        ListNode mergedList = mergeSort.mergeSort(unsortedlist);
-
+        Node unsortedlist=mergeSort.mergeTwoLists(m1.head, m2.head);
+        
+        //Node mergedList = mergeSort.mergeSort(unsortedlist);
+        mergeSort.printList(unsortedlist);
         System.out.println("\nMerged and Sorted List:");
-        mergeSort.printList(mergedList);
+        //mergeSort.printList(unsortedlist);
+//        System.out.println("\nMerged and Sorted List:");
+//        mergeSort.printList(mergedList);
     }
 }
