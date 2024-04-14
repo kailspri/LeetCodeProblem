@@ -21,10 +21,10 @@ public class SearchInsetPos {
 
 	public static void main(String[] args) {
 		int arr []= {1,3,5,6};
-		int target=0;
-		int Index=searchInsert( arr,  target);
-		//int IndexPos=SearchInsert(arr,target);
-		System.out.println("Found At :"+Index);
+		int target=7;
+		//int Index=searchInsert( arr,  target);
+		int IndexPos=SearchInsert(arr,target);
+		System.out.println("Found At :"+IndexPos);
 	}
 
 	private static int SearchInsert(int[] arr, int target) {
@@ -33,7 +33,7 @@ public class SearchInsetPos {
 		while(start<=end) {
 			int mid=start+(end-start)/2;
 			if(arr[mid]==target)
-				start=mid;
+				return mid;
 			else if(arr[mid]<target)
 				 start=mid+1;
 			else
