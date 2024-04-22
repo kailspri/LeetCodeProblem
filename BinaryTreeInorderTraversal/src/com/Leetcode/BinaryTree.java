@@ -56,6 +56,24 @@ public class BinaryTree {
          preOrder(root.right,nums);
          return nums;
       }
+      /*Pre Order Traversal Leet Code */
+      
+      /*Post Order Traversal Leet Code */
+      public List<Integer> postorderTraversal(TreeNode root) {
+          List<Integer> nums=new ArrayList<>();
+          List<Integer> list1=postOrder(root,nums);
+          return list1 ;
+      }
+      public List<Integer> postOrder(TreeNode root,List<Integer> nums){
+          if(root==null)
+             return new ArrayList<>();
+          postOrder(root.left,nums);
+          postOrder(root.right,nums);
+          nums.add(root.val);
+
+          return nums;
+      }
+      /*Post Order Traversal Leet Code */
 	private void preOrder(TreeNode root) {
 		if(root==null)
 			 return;
