@@ -73,7 +73,7 @@ public class BinaryTree {
 
           return nums;
       }
-      /*Post Order Traversal Leet Code */
+      /*Post; Order Traversal Leet Code */
 	private void preOrder(TreeNode root) {
 		if(root==null)
 			 return;
