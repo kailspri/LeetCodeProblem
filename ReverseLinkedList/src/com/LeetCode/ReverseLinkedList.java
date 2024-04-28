@@ -18,6 +18,7 @@ Node head;
 		reveseList.add(8);
 		reveseList.printList(reveseList.head);
 		Node reversehead=reveseList.reverseList(reveseList.head);
+		System.out.println("ReverseList ***************");
 		reveseList.printList(reversehead);
 		
 
