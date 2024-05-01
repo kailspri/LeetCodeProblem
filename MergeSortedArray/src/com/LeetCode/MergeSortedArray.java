@@ -26,7 +26,7 @@ public class MergeSortedArray {
 //			list2.add(nums2[i]);
 //		}
 		List<Integer> list1= new ArrayList<>();
-		for(int i =0;i<m;i++) {
+		for(int i=0;i<m;i++) {
 			list1.add(nums1[i]);
 		}
 		List<Integer> list2= new ArrayList<>();
