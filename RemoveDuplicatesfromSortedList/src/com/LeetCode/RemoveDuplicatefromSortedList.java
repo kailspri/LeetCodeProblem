@@ -32,6 +32,7 @@ public class RemoveDuplicatefromSortedList {
 			if(trav.val == trav.next.val) {
 				trav.next=trav.next.next;
 			}
+			else
 			trav=trav.next;
 		}
 		return head;

@@ -8,7 +8,7 @@ public class RemoveDupliFromUnsorted {
 
 	public static void main(String[] args) {
 		
-		int [] arr = {1,2,1};
+		int [] arr = {1,1,2};
 		//int arrLength=removeDuplicate(arr);
 		//Other way using Arrays.Sort method 
 		int arrLength=removeDuplicate1(arr);
