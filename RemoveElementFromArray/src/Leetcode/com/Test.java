@@ -38,7 +38,7 @@ public class Test {
 		
 		System.out.println(map.toString());
 		for(int i =0;i<nums.length;i++) {
-			nums[i]=map.get(i);
+			nums[i]=map.getOrDefault(i);
 		}
 		System.out.println(Arrays.toString(nums));
 		

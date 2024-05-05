@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 79b6ef4497f8148770ee16cef2130552d348b0e0
 package com.LeetCode;
 import java.util.*;
 
@@ -8,8 +12,11 @@ public class RemoveDuplicatesfromSortedArrayII {
         
         for (int num : nums) {
             countMap.put(num, countMap.getOrDefault(num, 0) + 1);
+            System.out.println(countMap.toString());
+           // System.out.println(Arrays.toString(nums));
             if (countMap.get(num) <= 2) {
                 nums[newIndex++] = num;
+                System.out.println(newIndex);
             }
         }
         
