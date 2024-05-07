@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 79b6ef4497f8148770ee16cef2130552d348b0e0
 package com.LeetCode;
 import java.util.*;
 
