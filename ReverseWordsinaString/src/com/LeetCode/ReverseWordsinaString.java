@@ -25,6 +25,11 @@ public class ReverseWordsinaString {
 
 	private static String reverseWords(String s) {
 		String[] arr = s.trim().split("\\s+");
+		for(String arr1:arr) {
+			//String arr 
+			System.out.println(arr1);
+		}
+		
 		int i=0,j=arr.length-1;
 		while(i<j) {
 			String temp=arr[i];
