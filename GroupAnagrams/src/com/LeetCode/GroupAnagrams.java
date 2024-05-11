@@ -45,6 +45,7 @@ public class GroupAnagrams {
 	            System.out.println("after contains "+map);
 	        }
 	        map.get(sortedStr).add(str);
+	        System.out.println("else map ->"+map);
 	    }
 	    System.out.println(map);
 	    return new ArrayList<>(map.values());
