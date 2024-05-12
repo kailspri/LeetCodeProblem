@@ -16,14 +16,12 @@ Example 3:
 Input: s = "paper", t = "title"
 Output: true*/
 public class IsomorphicStrings {
-
 	public static void main(String[] args) {
 		String s="egg"; String t="add";
 		 boolean op=isIsomorphic(s,t); 
 		 System.out.println(op);
 
 	}
-
 	private static boolean isIsomorphic(String s, String t) {
 		Map<Character ,Character>map=new HashMap<>();
 		if(s.length()!=t.length())
@@ -35,7 +33,7 @@ public class IsomorphicStrings {
 				if(!map.containsValue(replacement)) {
 					map.put(original, replacement);
 				}
-				else
+				else//cheack "badc" "baba"
 					 return false;
 			}
 			else {
@@ -47,7 +45,6 @@ public class IsomorphicStrings {
 		}
 		return true;
 	}
-
 	private static boolean isIsomorphicTest(String s, String t) {
 		Map<Character,Integer> mapS = new HashMap<>();
 		Map<Character,Integer> mapT = new HashMap<>();
@@ -64,5 +61,4 @@ public class IsomorphicStrings {
 		boolean areEqual=mapS.values().equals(mapT.values());
 		return areEqual;
 	}
-
 }
