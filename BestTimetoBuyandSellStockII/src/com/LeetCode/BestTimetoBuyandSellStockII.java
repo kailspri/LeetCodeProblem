@@ -19,6 +19,7 @@ public class BestTimetoBuyandSellStockII {
 		for(int i =1;i<prices.length;i++) {
 			if(start<prices[i]) {
 				maxProfit=maxProfit+(prices[i]-start);
+			    
 			}
 			 start=prices[i];
 		}
