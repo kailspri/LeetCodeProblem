@@ -82,7 +82,7 @@ public class RotateArray {
         System.out.println(Arrays.toString(nums));
         // Reverse the first k elements
         reverse(nums, 0, k - 1);
-        System.out.println(Arrays.toString(nums));
+        System.out.println("first k elements- > "+Arrays.toString(nums));
         // Reverse the remaining elements
         reverse(nums, k, n - 1);
         System.out.println(Arrays.toString(nums));
