@@ -109,7 +109,7 @@ public class MergeSortedLL {
 
         MergeSortedLL mergeSort = new MergeSortedLL();
         Node unsortedlist=mergeSort.mergeTwoLists(m1.head, m2.head);
-        
+        System.out.println("\nAfter merge :");
         //Node mergedList = mergeSort.mergeSort(unsortedlist);
         mergeSort.printList(unsortedlist);
         System.out.println("\nMerged and Sorted List:");

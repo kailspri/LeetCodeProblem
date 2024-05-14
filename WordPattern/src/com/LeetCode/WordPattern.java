@@ -20,7 +20,7 @@ public class WordPattern {
 
 	public static void main(String[] args) {
 		String pattern="aaaa";
-		String s="dog cat cat dog";
+		String s="dog cat cat fish";
 		boolean answer= wordPattern( pattern,  s);
 		System.out.println(answer);
 

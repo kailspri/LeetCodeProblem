@@ -95,8 +95,7 @@ public class RotateArray {
             nums[end] = temp;
             start++;
             end--;
-        }
-       
+        } 
     }
 
 }

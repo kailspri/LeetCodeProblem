@@ -29,5 +29,4 @@ public class IsSubsequence {
 		}
 		return sPointer==s.length();
 	}
-
 }
