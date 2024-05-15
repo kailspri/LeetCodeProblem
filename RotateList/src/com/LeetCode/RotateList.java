@@ -25,7 +25,7 @@ public class RotateList {
 		three.next=four;
 		four.next=null;
 		
-		printList(head);
+		//printList(head);
 		
 		ListNode rotatedList= rotateRight(head, k);
 		printList(rotatedList);
@@ -35,11 +35,12 @@ public class RotateList {
 		if(head==null || head.next==null||k==0)
 			 return head;
 		//calculate length 
-		int length=1;
+		int length=0;
 		ListNode current=head;
 		while(current!=null) {
-			current=current.next;
 			length++;
+			current=current.next;
+			
 		}
         // Calculate the actual rotation value
         k = k % length;
@@ -48,7 +49,11 @@ public class RotateList {
         }
         
         // Connect the last node with the head to make it a circular linked list
-        current.next = head;
+        
+        current=head;
+        while(current.next!=null) {
+        	current=current.next;
+        }current.next = head;
         
         // Traverse (length - k) nodes to find the new head and the node before it
         for (int i = 0; i < length - k; i++) {
