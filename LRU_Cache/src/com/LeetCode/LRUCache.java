@@ -22,8 +22,8 @@ public class LRUCache {
     public LRUCache(int capacity) {
         this.capacity=capacity;
         //created dummy Node so that Insert delete will handle in b/w them.
-        Node head=new Node(0, 0);
-        Node tail=new Node(0, 0);
+         head=new Node(0, 0);
+         tail=new Node(0, 0);
         head.next=tail;
         tail.prev=head;
     }
