@@ -21,7 +21,7 @@ public class ReverseNodes_in_k_Group {
 		two.next=three;
 		three.next=four;
 		four.next=null;
-		int k=2;
+		int k=3;
 		
 		Node reverseKHead=reverseKGroup( head,  k);
         printList(reverseKHead);
@@ -42,6 +42,14 @@ public class ReverseNodes_in_k_Group {
 		Node curr=head;
 		Node next=null;
 		int count =0;
+	     // Check if there are at least k nodes remaining
+        Node temp = head;
+        for (int i = 0; i < k; i++) {
+            if (temp == null) {
+                return head; // Less than k nodes remaining, return as it is
+            }
+            temp = temp.next;
+        }
 		while(count<k && curr!=null) {
 			next=curr.next;
 			curr.next=prev;

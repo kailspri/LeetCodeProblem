@@ -41,8 +41,7 @@ public class AddTwoNumbers {
 			temp=temp.next;
 		}
 		
-	}
-
+	}																																		
 	private static Node addTwoNumbers(Node l1, Node l2) {
 		Node dummy=new Node();
 		Node temp=dummy;
