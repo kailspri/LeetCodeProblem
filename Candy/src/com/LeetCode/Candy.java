@@ -8,7 +8,7 @@ Explanation: You can allocate to the first,
 second and thirdchild with 2, 1, 2 candies respectively.*/
 public class Candy {
 	public static void main(String[] args) {
-		int[] ratings= {1,0,2};
+		int[] ratings= {1,3,4,5,2}; //op 11
 		int candies= candy(ratings);
 		System.out.println(candies);
 	}
